@@ -11,6 +11,7 @@ const sagaMiddleware = createSagaMiddleware();
 middlewares.push(sagaMiddleware);
 
 let middleware = applyMiddleware(...middlewares);
+
 const history = createHistory();
 const store = createStore(
   reducers,
@@ -20,6 +21,7 @@ const store = createStore(
     window.devToolsExtension ? window.devToolsExtension() : f => f
   )
 );
+
 sagaMiddleware.run(sagas);
 
 export { store, history };

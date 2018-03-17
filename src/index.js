@@ -20,7 +20,7 @@ import AppC from "./components/app_C";
 ReactDOM.render(
   <MuiThemeProvider>
     <Provider store={store}>
-      <BrowserRouter history={history}>
+      <ConnectedRouter history={history}>
         <div>
           <Switch>
             <Route path="/c" component={AppC} />
@@ -28,7 +28,7 @@ ReactDOM.render(
             <Route path="/" component={App} />
           </Switch>
         </div>
-      </BrowserRouter>
+      </ConnectedRouter>
     </Provider>
   </MuiThemeProvider>,
   document.getElementById("app")
