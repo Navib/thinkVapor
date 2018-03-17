@@ -9,6 +9,7 @@ import reducers from "./reducers";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import { store, history } from "./store";
 import { ConnectedRouter } from "react-router-redux";
+import muiTheme from "./theme/index";
 
 import "./styles/main.scss";
 import "./assets/Rick.png";
@@ -18,7 +19,7 @@ import AppB from "./components/app_B";
 import AppC from "./components/app_C";
 
 ReactDOM.render(
-  <MuiThemeProvider>
+  <MuiThemeProvider muiTheme={muiTheme}>
     <Provider store={store}>
       <ConnectedRouter history={history}>
         <div>
