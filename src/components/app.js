@@ -2,11 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import RaisedButton from "material-ui/RaisedButton";
 import Menu from "../containers/Menu";
+import GridInline from "../components/grid_inline";
 
 const App = props => (
   <div>
     <Menu />
     <RaisedButton label={props.buttonText} onClick={props.onClick} />
+    <GridInline />
   </div>
 );
 
