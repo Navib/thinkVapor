@@ -61,7 +61,7 @@ module.exports = {
             {
               loader: "postcss-loader",
               options: {
-                plugins: [autoprefixer("last 2 version")],
+                plugins: [autoprefixer("last 2 version"), require("lost")],
                 sourceMap: true
               }
             },
