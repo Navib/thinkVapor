@@ -12,7 +12,7 @@ import { ConnectedRouter } from "react-router-redux";
 import muiTheme from "./theme/index";
 
 import "./styles/main.scss";
-import "./assets/Rick.png";
+import "./assets/vape_bg.jpg";
 
 import App from "./containers/app";
 import AppB from "./components/app_B";
