@@ -1,0 +1,42 @@
+/*
+ * Page styles
+*/
+
+.page {
+  height: 100vh;
+  width: 100%;
+  background: rgba(81, 81, 107, 0.7) !important;
+
+  .lost-grid {
+    lost-center: 980px 30px flex;
+    height: 80%;
+    background: red;
+    width: 100%;
+
+    .box {
+      position: relative;
+    }
+  }
+}
+
+@media (min-width: 400px) {
+  .page {
+    .lost-grid {
+      lost-center: 980px 30px flex;
+      height: 80%;
+      background: red;
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .page {
+    .lost-grid {
+      lost-center: 980px 30px flex;
+      height: 80%;
+      background: red;
+      width: 100%;
+    }
+  }
+}

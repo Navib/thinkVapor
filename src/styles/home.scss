@@ -1,0 +1,41 @@
+/*
+ * Home Slide styles
+*/
+
+.lost-grid-home {
+  justify-content: center;
+  background: none !important;
+  .home-box {
+    .title {
+    }
+    .subHead_A {
+    }
+    .subHead_B {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+    }
+    .subHead_C {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -60%);
+      width: 100%;
+      top: 60%;
+    }
+    .start-btn {
+      width: 3.6em;
+      height: 3.6em;
+      background: white;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      box-shadow: 0px 4px 10px 6px #666;
+      cursor: pointer;
+      z-index: 10;
+    }
+  }
+}

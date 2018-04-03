@@ -7,7 +7,7 @@ const params = {
       value: 20,
       density: {
         enable: true,
-        value_area: 3314
+        value_area: 1314
       }
     },
     color: {

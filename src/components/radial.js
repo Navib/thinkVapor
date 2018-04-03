@@ -2,6 +2,7 @@ import React from "react";
 import ParticlesView from "./particles";
 
 const circles = [
+  { id: 1, val: ".1" },
   { id: 2, val: ".3" },
   { id: 3, val: ".55" },
   { id: 4, val: ".8" },
@@ -20,7 +21,8 @@ const bgStyle = {
 const svgStyle = {
   position: "absolute",
   top: "0",
-  left: "0"
+  left: "0",
+  opacity: "0.5"
 };
 const Radial = () => (
   <div className="radial" style={bgStyle}>

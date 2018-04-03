@@ -28,12 +28,10 @@
     -webkit-align-items: center;
     align-items: center;
   }
+  .swiper-pagination {
+    width: 30px !important;
+  }
   .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets {
     left: 1.4em;
-  }
-  .page {
-    height: 100vh;
-    width: 100%;
-    background: rgba(109, 109, 177, 0.7);
   }
 }
