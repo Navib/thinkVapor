@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import Swiper from "react-id-swiper";
-
-import Radial from "../radial";
-import PAGES from "./slide";
 import Animate from "./animate";
+import Radial from "../radial";
+import Home from "./pages/home";
+import Who from "./pages/who";
+import Products from "./pages/products";
+import Benefits from "./pages/benefits";
+import Contact from "./pages/contact";
 
 const params = {
   direction: "vertical",
@@ -27,7 +30,6 @@ class Slider extends Component {
     Animate.onChange(this.swiper);
     Animate.showLogo(this.swiper);
   }
-
   render() {
     return (
       <div className="swiper-filter">
@@ -39,30 +41,26 @@ class Slider extends Component {
             if (node) this.swiper = node.swiper;
           }}
         >
-          {PAGES.map(page => (
-            <div
-              className="page page-type"
-              data-hash={page.slide}
-              key={page.id}
-            >
-              <div className={`lost-grid lost-grid-${page.slide}`}>
-                <div className={`box ${page.slide}-box`}>
-                  <h1 className="title">{page.title.toUpperCase()}</h1>
-                  <p className="subHead_A">{page.subHead_1.toUpperCase()}</p>
-                  <div
-                    className={page.button}
-                    onClick={() => {
-                      Animate.onClickStart(this.swiper);
-                    }}
-                  />
-                  <p className="subHead_C">
-                    {page.subHead_3 ? page.subHead_3.toUpperCase() : ""}
-                  </p>
-                  <p className="subHead_B">{page.subHead_2.toUpperCase()}</p>
-                </div>
-              </div>
-            </div>
-          ))}
+          <div className="page page-type" data-hash="home">
+            <Home
+              swiper={this.swiper}
+              start={() => {
+                Animate.onClickStart(this.swiper);
+              }}
+            />
+          </div>
+          <div className="page page-type" data-hash="who-we-are">
+            <Who />
+          </div>
+          <div className="page page-type" data-hash="products">
+            <Products />
+          </div>
+          <div className="page page-type" data-hash="benefits">
+            <Benefits />
+          </div>
+          <div className="page page-type" data-hash="contact">
+            <Contact />
+          </div>
         </Swiper>
       </div>
     );
