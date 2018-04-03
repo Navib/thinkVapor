@@ -4,7 +4,7 @@ const PAGES = [
   {
     id: 0,
     slide: "home",
-    title: "Company Name",
+    title: " ",
     subHead_1: "Subhead Tag Line one sentence",
     subHead_2: "TagLIne #2 Quick n Catchy",
     subHead_3: "Start Your Experience",
@@ -12,8 +12,8 @@ const PAGES = [
   },
   {
     id: 1,
-    slide: "Who We Are",
-    title: "About Title",
+    slide: "who-we-are",
+    title: "WHO WE ARE",
     subHead_1: "Subhead Tag Line one sentence",
     subHead_2: "TagLIne #2 Quick n Catchy",
     button: "plus-sign",

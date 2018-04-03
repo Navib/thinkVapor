@@ -15,16 +15,18 @@ const onClickStart = swiper => {
 const showLogo = swiper => {
   if (swiper) {
     const logo = document.getElementById("logo");
-    swiper.on("slideNextTransitionEnd", function() {
+    swiper.on("slideNextTransitionStart", function() {
       if (swiper.activeIndex > 0) {
         logo.style.top = "0px";
         logo.style.opacity = "1";
+        logo.style.fontSize = "1.8em";
       }
     });
-    swiper.on("slidePrevTransitionStart", function() {
+    swiper.on("slidePrevTransitionEnd", function() {
       if (swiper.activeIndex === 0) {
-        logo.style.top = "-1.2em";
-        logo.style.opacity = "0";
+        logo.style.top = "3.6em";
+        logo.style.opacity = "1";
+        logo.style.fontSize = "2.4em";
       }
     });
   }
