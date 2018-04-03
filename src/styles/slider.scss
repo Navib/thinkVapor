@@ -34,4 +34,27 @@
   .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets {
     left: 1.4em;
   }
+  .swiper-pagination-bullet {
+    background: transparent;
+    opacity: 0.2;
+    border: 1px solid #fff;
+  }
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+    border: 1px solid black;
+  }
+}
+
+.swiper-filter {
+  #logo {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    top: -1.2em;
+    opacity: 0;
+  }
 }

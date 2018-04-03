@@ -18,6 +18,8 @@ const params = {
   hashNavigation: true
 };
 
+const logoStyle = {};
+
 class Slider extends Component {
   constructor() {
     super();
@@ -25,11 +27,16 @@ class Slider extends Component {
   }
   componentDidMount() {
     Animate.onChange(this.swiper);
+    Animate.showLogo(this.swiper);
   }
+
   render() {
     return (
       <div className="swiper-filter">
         <Radial />
+        <h1 style={logoStyle} id="logo">
+          COMPANY NAME
+        </h1>
         <Swiper
           {...params}
           ref={node => {
