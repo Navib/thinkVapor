@@ -21,8 +21,9 @@
       position: absolute;
       left: 50%;
       transform: translate(-50%, -60%);
-      width: 100%;
+      width: 150px;
       top: 60%;
+      font-size: calc(0.875em - 1px);
     }
     .start-btn {
       width: 3.6em;
@@ -36,6 +37,11 @@
       box-shadow: 0px 4px 10px 6px #666;
       cursor: pointer;
       z-index: 10;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .start-btn:hover {
+      box-shadow: 0px 1px 14px 2px #fff;
     }
   }
 }
