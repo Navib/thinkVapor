@@ -22,7 +22,7 @@ const svgStyle = {
   position: "absolute",
   top: "0",
   left: "0",
-  opacity: "0.5"
+  opacity: "0.1"
 };
 const Radial = () => (
   <div className="radial" style={bgStyle}>
@@ -36,7 +36,7 @@ const Radial = () => (
           r={circle.val}
           fill="transparent"
           strokeWidth=".005"
-          stroke="black"
+          stroke="white"
         />
       ))}
     </svg>

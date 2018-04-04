@@ -2,10 +2,13 @@ import React from "react";
 import Swiper from "react-id-swiper";
 
 const onChange = swiper => {
-  if (swiper)
-    swiper.on("slideChange", function() {
+  if (swiper) {
+    const filter = document.querySelector(".radial");
+    swiper.on("slideChangeTransitionStart", function() {
       //console.log(swiper.activeIndex);
+      filter.style.transform = "scale(1.2)";
     });
+  }
 };
 
 const onClickStart = swiper => {
@@ -32,8 +35,39 @@ const showLogo = swiper => {
   }
 };
 
+const slideIn = swiper => {
+  if (swiper) {
+    const bg = document.getElementById("bg");
+    const wImg = document.getElementById("whoImg");
+    const rSide = document.getElementById("rSide");
+    const filter = document.querySelector(".radial");
+
+    swiper.on("slideChangeTransitionEnd", function() {
+      switch (swiper.activeIndex) {
+        case 1:
+          bg.style.height = "380px";
+          filter.style.transform = "scale(1)";
+          filter.style.backgroundImage = "url(/assets/vape_bg_2.jpg)";
+          setTimeout(function() {
+            wImg.style.opacity = "1";
+            wImg.style.width = "100%";
+            rSide.style.opacity = "1";
+          }, 300);
+          break;
+        default:
+          bg.style.height = "0";
+          wImg.style.opacity = "0";
+          wImg.style.width = "0";
+          rSide.style.opacity = "0";
+          filter.style.transform = "scale(1)";
+          filter.style.backgroundImage = "url(./assets/vape_bg.jpg)";
+      }
+    });
+  }
+};
 export default {
   onChange: swiper => onChange(swiper),
   onClickStart: swiper => onClickStart(swiper),
-  showLogo: swiper => showLogo(swiper)
+  showLogo: swiper => showLogo(swiper),
+  slideIn: swiper => slideIn(swiper)
 };

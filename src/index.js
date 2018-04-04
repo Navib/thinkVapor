@@ -13,6 +13,7 @@ import muiTheme from "./theme/index";
 
 import "./styles/main.scss";
 import "./assets/vape_bg.jpg";
+import "./assets/vape_bg_2.jpg";
 
 import App from "./containers/app";
 import AppB from "./components/app_B";

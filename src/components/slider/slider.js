@@ -29,6 +29,7 @@ class Slider extends Component {
   componentDidMount() {
     Animate.onChange(this.swiper);
     Animate.showLogo(this.swiper);
+    Animate.slideIn(this.swiper);
   }
   render() {
     return (
