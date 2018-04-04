@@ -65,9 +65,39 @@ const slideIn = swiper => {
     });
   }
 };
+
+const growDiv = swiper => {
+  if (swiper) {
+    const stretch = document.getElementById("stretch");
+
+    swiper.on("slideChangeTransitionStart", function() {
+      switch (swiper.activeIndex) {
+        case 1:
+          stretch.style.bottom = "-100vh";
+          break;
+        case 2:
+          stretch.style.bottom = "-60vh";
+          break;
+        case 3:
+          stretch.style.bottom = "40vh";
+          break;
+        case 4:
+          stretch.style.bottom = "100vh";
+          break;
+        case 5:
+          stretch.style.bottom = "100vh";
+          break;
+        default:
+          break;
+      }
+    });
+  }
+};
+
 export default {
   onChange: swiper => onChange(swiper),
   onClickStart: swiper => onClickStart(swiper),
   showLogo: swiper => showLogo(swiper),
-  slideIn: swiper => slideIn(swiper)
+  slideIn: swiper => slideIn(swiper),
+  growDiv: swiper => growDiv(swiper)
 };

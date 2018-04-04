@@ -1,0 +1,13 @@
+/*
+ * Products styles
+*/
+
+.lost-grid-products {
+  background: none !important;
+  .products-box {
+    width: 100%;
+  }
+  .title-bar {
+    lost-column: 1/1;
+  }
+}

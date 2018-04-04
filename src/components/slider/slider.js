@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Swiper from "react-id-swiper";
 import Animate from "./animate";
 import Radial from "../radial";
+import Stretch from "../stretch";
 import Home from "./pages/home";
 import Who from "./pages/who";
 import Products from "./pages/products";
@@ -30,11 +31,13 @@ class Slider extends Component {
     Animate.onChange(this.swiper);
     Animate.showLogo(this.swiper);
     Animate.slideIn(this.swiper);
+    Animate.growDiv(this.swiper);
   }
   render() {
     return (
       <div className="swiper-filter">
         <Radial />
+        <Stretch />
         <h1 id="logo">COMPANY NAME</h1>
         <Swiper
           {...params}

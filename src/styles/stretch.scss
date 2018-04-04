@@ -1,0 +1,11 @@
+/*
+ * Stretch Div styles
+*/
+#stretch {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  transition: all 1s ease-in-out;
+  bottom: -100vh;
+}
