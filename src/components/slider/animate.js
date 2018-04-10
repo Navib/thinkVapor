@@ -43,16 +43,15 @@ const slideIn = swiper => {
     const filter = document.querySelector(".radial");
 
     swiper.on("slideChangeTransitionEnd", function() {
+      console.log("please");
       switch (swiper.activeIndex) {
         case 1:
           bg.style.height = "380px";
           filter.style.transform = "scale(1)";
           filter.style.backgroundImage = "url(/assets/vape_bg_2.jpg)";
-          setTimeout(function() {
-            wImg.style.opacity = "1";
-            wImg.style.width = "100%";
-            rSide.style.opacity = "1";
-          }, 300);
+          wImg.style.opacity = "1";
+          wImg.style.width = "100%";
+          rSide.style.opacity = "1";
           break;
         default:
           bg.style.height = "0";
@@ -61,6 +60,7 @@ const slideIn = swiper => {
           rSide.style.opacity = "0";
           filter.style.transform = "scale(1)";
           filter.style.backgroundImage = "url(./assets/vape_bg.jpg)";
+          break;
       }
     });
   }
@@ -94,10 +94,28 @@ const growDiv = swiper => {
   }
 };
 
+const fadeContent = swiper => {
+  if (swiper) {
+    const product = document.querySelector(".col-1");
+
+    swiper.on("slideChangeTransitionEnd", function() {
+      switch (swiper.activeIndex) {
+        case 2:
+          product.style.opacity = "1";
+          break;
+        default:
+          product.style.opacity = "0";
+          break;
+      }
+    });
+  }
+};
+
 export default {
   onChange: swiper => onChange(swiper),
   onClickStart: swiper => onClickStart(swiper),
   showLogo: swiper => showLogo(swiper),
   slideIn: swiper => slideIn(swiper),
-  growDiv: swiper => growDiv(swiper)
+  growDiv: swiper => growDiv(swiper),
+  fadeContent: swiper => fadeContent(swiper)
 };

@@ -32,6 +32,8 @@ class Slider extends Component {
     Animate.showLogo(this.swiper);
     Animate.slideIn(this.swiper);
     Animate.growDiv(this.swiper);
+    Animate.fadeContent(this.swiper);
+    console.log(Animate.slideIn(this.swiper));
   }
   render() {
     return (
