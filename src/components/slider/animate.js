@@ -48,7 +48,6 @@ const slideIn = swiper => {
         case 1:
           bg.style.height = "380px";
           filter.style.transform = "scale(1)";
-          filter.style.backgroundImage = "url(/assets/vape_bg_2.jpg)";
           wImg.style.opacity = "1";
           wImg.style.width = "100%";
           rSide.style.opacity = "1";

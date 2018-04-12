@@ -13,15 +13,35 @@
     opacity: 0;
     transition: all 0.3s ease-in-out;
     transition-delay: 0.8s;
-    lost-column: 1/3;
+    lost-column: 1/1;
+
+    .product {
+      display: flex;
+      align-items: center;
+      align-content: space-around;
+      justify-content: space-around;
+    }
 
     img {
-      margin: 0 auto;
-      display: block;
-      max-width: 100%;
+      flex-basis: 33%;
+      max-width: 33%;
     }
     .prod-text {
       font-size: 0.8em;
+    }
+    .overlay {
+      background: white;
+      padding: 4em 1em;
+      flex-basis: 50%;
+      max-width: 50%;
+    }
+    .shop-now-cta {
+      border: 1px solid black;
+      padding: 8px;
+      display: block;
+      text-decoration: none;
+      color: #444;
+      text-transform: uppercase;
     }
   }
 }
